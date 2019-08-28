@@ -2,8 +2,8 @@ import axios from 'axios';
 
 import { queryBuilder } from '../utils';
 
-const CITY_BASE_URL = 'https://resistance-calendar.herokuapp.com/v1/cities';
-const EVENT_BASE_URL = 'https://resistance-calendar.herokuapp.com/v1/events';
+const CITY_BASE_URL = 'https://protest-tracker-api-stg.herokuapp.com/v1/cities';
+const EVENT_BASE_URL = 'https://protest-tracker-api-stg.herokuapp.com/v1/events';
 // const EVENT_BASE_URL = 'https://resistance-calendar-pr-81.herokuapp.com/v1/events';
 
 // Temporary while service is not returning is_canceled flag to display flag in UI
