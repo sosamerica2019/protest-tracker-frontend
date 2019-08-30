@@ -22,16 +22,7 @@ This repository covers the ReactJS front-end.  The API can be found at [Resistan
 
 ### Setup
 
-- [Fork the repository](https://help.github.com/articles/fork-a-repo/)
-- Clone the project: `git clone git@github.com:ResistanceCalendar/resistance-calendar-frontend.git`
-- Change into the directory: `cd resistance-calendar-frontend`
-
-### Install the dependencies
-
-```sh
-yarn
-```
-Note: Can also use `npm` instead of `yarn` for these commands.  Here's [an article](https://medium.com/@nikjohn/facebooks-yarn-vs-npm-is-yarn-really-better-1890b3ea6515#.mh12h39zm) comparing the two package managers.
+See /doc/dev_setup.md
 
 ### Run the test suite
 
