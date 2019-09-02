@@ -21,7 +21,10 @@ const config = {
     filename: '[name].[chunkhash].js'
   },
   plugins: [
-    new Dotenv()
+    new Dotenv({
+      safe: true,
+      silent: true
+    })
   ]
 };
 
