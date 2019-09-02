@@ -5,6 +5,7 @@
 1. Install required node version (from /.node-version) or install [nodenv][1] and run `nodenv install`.
 1. Install [yarn package manager][2]
 1. Install dependencies: `yarn install`
+1. Copy .env.example file: `cp .env.example .env`
 
 [1]: https://github.com/nodenv/nodenv#installation
 [2]: https://yarnpkg.com/en/docs/install
