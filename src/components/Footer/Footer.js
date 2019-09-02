@@ -11,14 +11,14 @@ function footerLinks() {
     <div className={styles.linksWrapper}>
       <Link to="/">Home</Link>
       <a
-        href="https://www.facebook.com/resistancecalendar"
+        href="https://www.facebook.com/groups/578875172609807/"
         target="_blank"
         rel="noopener noreferrer"
       >
         Facebook
       </a>
       <a
-        href="https://twitter.com/ResistCalendar"
+        href="https://twitter.com/SoSAmerica2019"
         target="_blank"
         rel="noopener noreferrer"
       >

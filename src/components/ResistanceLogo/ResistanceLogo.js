@@ -13,7 +13,7 @@ const ResistanceLogo = (props) => {
 
   return (
     <div className={styles.customClassName}>
-      <img src={image} alt="Logo for the Resistance Calendar" />
+      <img src={image} alt="Logo for SOS Protest Tracker" />
     </div>
   );
 };

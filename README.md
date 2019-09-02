@@ -1,11 +1,10 @@
-# [Resistance Calendar](#resistance-calendar)
-[![Build Status](https://travis-ci.org/ResistanceCalendar/resistance-calendar-frontend.svg?branch=master)](https://travis-ci.org/ResistanceCalendar/resistance-calendar-frontend) [![Code Climate](https://codeclimate.com/github/ResistanceCalendar/resistance-calendar-frontend/badges/gpa.svg)](https://codeclimate.com/github/ResistanceCalendar/resistance-calendar-frontend) [![Test Coverage](https://codeclimate.com/github/ResistanceCalendar/resistance-calendar-frontend/badges/coverage.svg)](https://codeclimate.com/github/ResistanceCalendar/resistance-calendar-frontend/coverage)
+# [SOS Protest Tracker](#protest-tracker)
 
 See our [contributing guide](CONTRIBUTING.md) for more information.
 
-*The Resistance Calendar* aims to empower progressive activists by providing a massive central listing of upcoming events. Crowdsourced event submissions are curated by a team of volunteers, while events from allied organizations will be included automatically. Event filters make it easy for people to find events near them. Filtered notifications help people discover new events immediately.
+*SOS Protest Tracker* is a site where activists can find information about sustained public resistance events.
 
-This is a rebuild of the live website currently found [here](https://www.resistancecalendar.org/).
+It began as a copy of [the Resistance Calendar](https://www.resistancecalendar.org/).
 
 ## [Table of Contents](#contents-anchor)
 
@@ -16,7 +15,7 @@ This is a rebuild of the live website currently found [here](https://www.resista
 
 ## [About the stack](#about-the-stack)
 
-This repository covers the ReactJS front-end.  The API can be found at [ResistanceCalendar/resistance-calendar-api](https://github.com/ResistanceCalendar/resistance-calendar-api).
+This repository covers the ReactJS front-end.  The API can be found at [sosamerica2019/protest-tracker-api](https://github.com/sosamerica2019/protest-tracker-api).
 
 ## [Getting Started](#getting-started)
 
@@ -73,4 +72,4 @@ See our [contributing guide](CONTRIBUTING.md) for more information.
 
 ---
 
-[Return to top](#resistance-calendar)
+[Return to top](#protest-tracker)
