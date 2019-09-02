@@ -1,3 +1,4 @@
+const Dotenv = require('dotenv-webpack');
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
@@ -17,11 +18,13 @@ const config = {
     app: './src/index.js',
     vendor: vendorRegistry
   },
-
   output: {
     path: PATHS.dist,
     filename: '[name].[chunkhash].js'
-  }
+  },
+  plugins: [
+    new Dotenv()
+  ]
 };
 
 function makeConfig() {

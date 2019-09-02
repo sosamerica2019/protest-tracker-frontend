@@ -2,8 +2,9 @@ import axios from 'axios';
 
 import { queryBuilder } from '../utils';
 
-const CITY_BASE_URL = 'https://protest-tracker-api-stg.herokuapp.com/v1/cities';
-const EVENT_BASE_URL = 'https://protest-tracker-api-stg.herokuapp.com/v1/events';
+
+const CITY_BASE_URL = `${process.env.PROTEST_TRACKER_API_URL}/v1/cities`;
+const EVENT_BASE_URL = `${process.env.PROTEST_TRACKER_API_URL}/v1/events`;
 
 // Temporary while service is not returning is_canceled flag to display flag in UI
 function removeCanceledEvents(events) {
