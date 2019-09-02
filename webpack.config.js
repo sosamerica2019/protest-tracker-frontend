@@ -21,9 +21,12 @@ const config = {
     filename: '[name].[chunkhash].js'
   },
   plugins: [
+    // The options here ensure that all env vars have been defined, and that they can
+    // come from the .env or actual env vars.
     new Dotenv({
       safe: true,
-      silent: true
+      silent: true,
+      systemvars: true
     })
   ]
 };
