@@ -1,6 +1,6 @@
 const connect = require('connect');
 const redirectSSL = require('redirect-ssl');
-const serveStatic = require('serve-static');
+const serveHandler = require('serve-handler');
 
 // Create web server.
 const app = connect();
@@ -11,7 +11,14 @@ const redirectSSLMiddleware = redirectSSL.create({ statusCode: 301 });
 app.use(redirectSSLMiddleware);
 
 // Serve static (and compiled) content from /dist.
-const staticServerMiddleware = serveStatic('dist');
-app.use(staticServerMiddleware);
+const serveMiddleware = async (req, res) => {
+  await serveHandler(req, res, {
+    public: 'dist',
+    rewrites: [
+      { source: '**', destination: '/index.html' }
+    ]
+  });
+};
+app.use(serveMiddleware);
 
 app.listen(process.env.PORT || 5050);
