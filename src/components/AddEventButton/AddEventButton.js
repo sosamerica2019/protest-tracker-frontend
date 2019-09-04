@@ -4,12 +4,10 @@ import styles from './AddEventButton.sass';
 
 const AddEventButton = (props) => {
   return (
-    <button className={styles.btnAddEvents} onClick={props.handleButtonClick} >Add Event</button>
+    <a className={styles.btnAddEvents}
+      href="https://docs.google.com/forms/d/e/1FAIpQLScbAy0xEQy7iJame76OFqW_qt3R-8SaCi6t1LmI43t8sRiAWw/viewform"
+      target="_blank">Add Event</a>
   );
-};
-
-AddEventButton.propTypes = {
-  handleButtonClick: PropTypes.func.isRequired
 };
 
 export default AddEventButton;

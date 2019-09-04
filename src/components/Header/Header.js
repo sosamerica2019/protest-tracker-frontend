@@ -67,7 +67,7 @@ class Header extends Component {
             </Link>
           </div>
           <div className={styles.headerRightSection} onClick={e => e.stopPropagation()}>
-            <AddEventButton className="add-event-btn" handleButtonClick={this.toggleModalState} />
+            <AddEventButton className="add-event-btn" />
             {this.state.addEventModalExists && this.renderAddEventModal()}
           </div>
         </header>
