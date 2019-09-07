@@ -5,7 +5,7 @@ import styles from './EventFilters.sass';
 
 
 const EventFilters = (props) => {
-  const { filters, updateFilters, disableGeoLocation, geoLocation } = props;
+  const { filters, updateFilters, disableGeoLocation, geoLocation, getPosition } = props;
 
   return (
     <section className={styles.filtersBorder}>
@@ -22,6 +22,7 @@ const EventFilters = (props) => {
           updateFilters={updateFilters}
           disableGeoLocation={disableGeoLocation}
           geoLocation={geoLocation}
+          getPosition={getPosition}
         />
       </div>
       <div className={styles.rsvpFilter}>
@@ -45,6 +46,7 @@ const EventFilters = (props) => {
 EventFilters.propTypes = {
   filters: PropTypes.shape().isRequired,
   geoLocation: PropTypes.shape(),
+  getPosition: PropTypes.func.isRequired,
   disableGeoLocation: PropTypes.func,
   updateFilters: PropTypes.func.isRequired
 };

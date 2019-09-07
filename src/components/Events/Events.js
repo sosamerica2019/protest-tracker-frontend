@@ -250,6 +250,7 @@ class Events extends Component {
           <EventFilters
             filters={filters}
             geoLocation={geoLocation}
+            getPosition={this.getPosition.bind(this)}
             disableGeoLocation={() => this.setState({ geoLocation: {} })}
             updateFilters={this.updateFilters.bind(this)}
           />

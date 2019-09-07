@@ -176,7 +176,7 @@ class EventLocationFilter extends Component {
         >
           <fieldset>
             <div className={styles.inputGroup}>
-              <label htmlFor="location">ENTER ZIPCODE</label>
+              <label htmlFor="location">ZIPCODE</label>
               <input
                 type="text"
                 name="location"
@@ -186,11 +186,17 @@ class EventLocationFilter extends Component {
                 required
                 placeholder="Enter zipcode"
               />
+              <button
+                type="button"
+                className={styles.detectBtn}
+                onClick={this.props.getPosition}>
+                Detect
+              </button>
             </div>
             <div className={styles.errorMsg}>{locationErrorMsg}</div>
           </fieldset>
           <div className={styles.inputGroup}>
-            <label htmlFor="range">SET RANGE</label>
+            <label htmlFor="range">RANGE</label>
             <select
               name="range"
               value={range.value}
@@ -224,6 +230,7 @@ class EventLocationFilter extends Component {
 
 EventLocationFilter.propTypes = {
   disableGeoLocation: PropTypes.func,
+  getPosition: PropTypes.func.isRequired,
   updateFilters: PropTypes.func.isRequired,
   location: PropTypes.string,
   range: PropTypes.number
