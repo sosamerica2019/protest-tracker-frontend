@@ -83,7 +83,9 @@ class Events extends Component {
     } else {
       // No need to look up location if query string is dictating location
       if (!location || !range) {
-        await this.getPosition();
+        if (process.env.PT_FEAT_DISABLE_INITIAL_GEO !== 'true') {
+          await this.getPosition();
+        }
       }
 
       this.getEvents();
