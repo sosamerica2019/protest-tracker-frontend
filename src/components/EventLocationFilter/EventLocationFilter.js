@@ -11,6 +11,7 @@ const distanceRange = [
   { value: 40234, label: '25 miles' },
   { value: 80468, label: '50 miles' },
   { value: 160934, label: '100 miles' },
+  { value: 402335, label: '250 miles' },
   { value: 804672, label: '500 miles' }
 ];
 const defaultRangeIndex = 4;
