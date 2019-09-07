@@ -1,5 +1,6 @@
 export { default as App } from './App/App';
 export { default as Events } from './Events/Events';
+export { default as Paragraph } from './Paragraph/Paragraph';
 export { default as AddEventButton } from './AddEventButton/AddEventButton';
 export { default as ResistanceLogo } from './ResistanceLogo/ResistanceLogo';
 export { default as Header } from './Header/Header';

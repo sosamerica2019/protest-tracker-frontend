@@ -30,6 +30,7 @@
     "react-dom": "^15.4.2",
     "react-ga": "^2.2.0",
     "react-icons": "^2.2.3",
+    "react-linkify": "^0.2.2",
     "react-router-dom": "~4.1.1",
     "redirect-ssl": "^1.4.1",
     "serve": "^11.1.0",

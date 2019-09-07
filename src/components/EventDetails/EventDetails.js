@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-import { DateBlock, RsvpBadge, Loading, SocialBtns } from '../';
+import { DateBlock, RsvpBadge, Loading, Paragraph, SocialBtns } from '../';
 import { eventsAPI } from '../../api';
 import { dateTimeUtils, urlUtils } from '../../utils';
 import { devMode } from '../../config';
@@ -98,8 +98,6 @@ class EventDetails extends Component {
       location
     } = event;
 
-    const descriptionHtml = description ? { __html: description.replace(/\n/g, '<br/>') } : null;
-
     const featuredImageUrlOrDefault = (!devMode && featuredImageUrl) ?
       urlUtils.getImageUrl(featuredImageUrl, 'c_lfill,w_800') :
       '../static/img/default-event-600x360.png';
@@ -189,7 +187,7 @@ class EventDetails extends Component {
           </div>
 
           <div className={styles.description}>
-            <p dangerouslySetInnerHTML={descriptionHtml} />
+            <Paragraph text={description} />
           </div>
         </div>
       </div>
