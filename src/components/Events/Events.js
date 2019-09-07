@@ -107,7 +107,7 @@ class Events extends Component {
           this.setState({
             filters: {
               ...this.state.filters,
-              location: res.data.zipcode
+              location: res.data.zip
             },
             geoLocation: {
               lat: pos.coords.latitude,
