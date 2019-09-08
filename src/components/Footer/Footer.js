@@ -11,7 +11,7 @@ function footerLinks() {
     <div className={styles.linksWrapper}>
       <Link to="/">Home</Link>
       <a
-        href="https://www.facebook.com/groups/578875172609807/"
+        href="https://www.facebook.com/groups/1175384176002280/"
         target="_blank"
         rel="noopener noreferrer"
       >
