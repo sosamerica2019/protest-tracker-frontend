@@ -45,6 +45,7 @@ class EventLocationFilter extends Component {
     this._onLocationBlur = this.onLocationBlur.bind(this);
     this._handleRangeChange = this.handleRangeChange.bind(this);
     this._handleOnChangeLocation = this.handleOnChangeLocation.bind(this);
+    this._validateLocation = this.validateLocation.bind(this);
   }
 
   componentDidMount() {
@@ -61,7 +62,9 @@ class EventLocationFilter extends Component {
 
     // In case where location is determined by geoLocation API or by query string, set it the first time here
     if (!this.state.location && nextProps.location) {
-      this.setState({ location: nextProps.location });
+      this.setState({ location: nextProps.location }, () => {
+        this._validateLocation(nextProps.location);
+      });
     }
   }
 
