@@ -2,8 +2,7 @@ import React, { PropTypes } from 'react';
 import { Link } from 'react-router-dom';
 import _ from 'lodash';
 
-import { devMode } from '../../config';
-import { dateTimeUtils, urlUtils } from '../../utils';
+import { dateTimeUtils, eventImage } from '../../utils';
 import { DateBlock, RsvpBadge } from '../';
 import styles from './EventCard.sass';
 
@@ -24,17 +23,12 @@ const EventCard = ({ event, className }) => {
   const {
     start_date: startDate,
     end_date: endDate,
-    featured_image_url: featuredImageUrl,
     title,
     description,
     _id,
     total_accepted: totalAccepted,
     location
   } = event;
-
-  const featuredImageUrlOrDefault = (!devMode && featuredImageUrl) ?
-    urlUtils.getImageUrl(featuredImageUrl, 'c_thumb,g_faces:center,z_0.75,h_150,w_150') :
-    '../static/img/default-event-200.png';
 
   return (
     <li className={`${styles.card} ${className || ''}`}>
@@ -49,8 +43,9 @@ const EventCard = ({ event, className }) => {
             }}
           >
             <img
-              src={featuredImageUrlOrDefault}
-              alt="featured event"
+              src={eventImage.byType(event.summary, 150)}
+              srcSet={`${eventImage.byType(event.summary, 300)} 2x`}
+              alt="{event.summary} icon"
             />
           </Link>
         </div>
