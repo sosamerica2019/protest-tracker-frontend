@@ -3,6 +3,7 @@ const types = {
   Protest: 'protest',
   Rally: 'rally',
   'Relay Occupation': 'standingwave',
+  'Training/Talks': 'training',
   Vigil: 'vigil',
   'Voter Registration': 'voter-registration'
 };
