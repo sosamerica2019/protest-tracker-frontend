@@ -1,4 +1,4 @@
-export const facebookAppId = '660251294167723';
+export const facebookAppId = process.env.PROTEST_TRACKER_FACEBOOK_APP_ID;
 
 // The code below is a stop-gap while we come up with a more economic
 // solution to Cloudinary.
