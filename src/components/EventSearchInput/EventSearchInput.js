@@ -1,4 +1,5 @@
 import React, { PropTypes, Component } from 'react';
+import _ from 'lodash';
 import FaSearch from 'react-icons/lib/fa/search';
 
 import styles from './EventSearchInput.sass';
@@ -12,12 +13,21 @@ function isMobile() {
 }
 
 class EventSearchInput extends Component {
+  constructor(props) {
+    super(props);
+    this._updateFilters = _.debounce(this.updateFilters.bind(this));
+  }
+
   componentDidMount() {
     if (!isMobile()) { this.input.focus(); }
   }
 
+  updateFilters(searchText) {
+    this.props.updateFilters({ searchText });
+  }
+
   render() {
-    const { filterInput, updateFilters } = this.props;
+    const { filterInput } = this.props;
 
     return (
       <div className={styles.inputSearchWrapper}>
@@ -25,7 +35,7 @@ class EventSearchInput extends Component {
         <input
           value={filterInput}
           ref={node => this.input = node}
-          onChange={e => updateFilters({ searchText: e.target.value })}
+          onChange={e => this._updateFilters(e.target.value)}
           placeholder="Search by city, hashtag, or keyword"
         />
       </div>
