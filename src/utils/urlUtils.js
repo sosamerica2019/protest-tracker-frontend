@@ -1,3 +1,11 @@
+function fullyQualify(rootRelativeOrFullURL) {
+  if (rootRelativeOrFullURL.match(/https?:/)) {
+    return rootRelativeOrFullURL;
+  } else {
+    return `${process.env.PROTEST_TRACKER_SITE_URL}${rootRelativeOrFullURL}`;
+  }
+}
+
 // Backend may return image URLs from two different services -- Cloudinary or AWS
 // If it's a Cloudinary image, we can apply image transformations
 function getImageUrl(url, imageFormat) {
@@ -16,5 +24,6 @@ function getImageUrl(url, imageFormat) {
 }
 
 export default {
+  fullyQualify,
   getImageUrl
 };

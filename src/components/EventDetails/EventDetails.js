@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 
 import { DateBlock, RsvpBadge, Loading, Paragraph, SocialBtns } from '../';
 import { eventsAPI } from '../../api';
-import { dateTimeUtils, eventImage } from '../../utils';
+import { dateTimeUtils, eventImage, urlUtils } from '../../utils';
 import styles from './EventDetails.sass';
 
 const renderAddress = (location) => {
@@ -91,11 +91,14 @@ class EventDetails extends Component {
       start_date: startDate,
       end_date: endDate,
       browser_url: browserUrl,
-      featured_image_url: featuredImageUrl,
       description,
       total_accepted: totalAccepted,
       location
     } = event;
+
+    const img400 = eventImage.byType(event.summary, 400);
+    const img800 = eventImage.byType(event.summary, 800);
+    const img800Full = urlUtils.fullyQualify(img800);
 
     /* eslint-disable jsx-a11y/no-static-element-interactions */
     /* eslint-disable react/no-danger */
@@ -123,8 +126,8 @@ class EventDetails extends Component {
         <div className={styles.content}>
           <div className={styles.left}>
             <img
-              src={eventImage.byType(event.summary, 400)}
-              srcSet={`${eventImage.byType(event.summary, 800)} 2x`}
+              src={img400}
+              srcSet={`${img800} 2x`}
               alt={event.summary}
             />
           </div>
@@ -155,7 +158,7 @@ class EventDetails extends Component {
                     style={{ visibility: socialPopupOpen ? 'visible' : 'hidden' }}
                   >
                     <SocialBtns
-                      picture={featuredImageUrl}
+                      picture={img800Full}
                       title={title}
                       startDate={startDate}
                       description={description}
@@ -166,7 +169,7 @@ class EventDetails extends Component {
                 <div>
                   <div className={styles.desktopSharing}>
                     <SocialBtns
-                      picture={featuredImageUrl}
+                      picture={img800Full}
                       title={title}
                       startDate={startDate}
                       description={description}
