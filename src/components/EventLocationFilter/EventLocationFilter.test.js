@@ -7,6 +7,7 @@ describe('Component: <EventLocationFilter />', () => {
   const props = {};
 
   beforeEach(() => {
+    props.getPosition = jest.fn();
     props.updateFilters = jest.fn();
     props.disableGeoLocation = jest.fn();
   });

@@ -12,6 +12,7 @@ describe('Component: EventFilters', () => {
       startDate: null,
       location: ''
     };
+    props.getPosition = jest.fn();
     props.updateFilters = jest.fn();
   });
 
