@@ -11,7 +11,11 @@ function tokenizeSearchTerms(queryString) {
   }
 
   const queryStringArray = tokenizedTerms
-    .map(term => `(contains(title, '${term}') or contains(name, '${term}') or contains(description, '${term}'))`);  // eslint-disable-line max-len
+    .map(term => {
+      const fieldsToSearch = ['title', 'name', 'description', 'location/locality', 'hashtags'];
+      const searchQuery = fieldsToSearch.map(field => `contains(${field}, '${term}')`);
+      return `(${searchQuery.join(' or ')})`;
+    });
 
   return queryStringArray.join(' and ');
 }

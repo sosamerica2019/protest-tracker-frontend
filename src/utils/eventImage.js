@@ -2,7 +2,7 @@ const types = {
   March: 'march',
   Protest: 'protest',
   Rally: 'rally',
-  'Relay Occupation': 'standingwave',
+  'Relay Occupation': 'relay-occupation',
   'Training/Talks': 'training',
   Vigil: 'vigil',
   'Voter Registration': 'voter-registration'
