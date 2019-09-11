@@ -25,6 +25,14 @@ function footerLinks() {
         Twitter
       </a>
       <Link to="/privacy-policy">Privacy Policy</Link>
+      <a
+        href="https://www.patreon.com/sosamerica"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Donate
+      </a>
+
     </div>
   );
   /* eslint-enable jsx-a11y/href-no-hash */

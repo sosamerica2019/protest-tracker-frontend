@@ -7,7 +7,7 @@ const Copyright = (props) => {
     <p className={styles.wrapper}>
       <span>&copy; </span>
       <span>{props.year}&nbsp;</span>
-      <span>SOS America 2019</span>
+      <span><a href="https://www.sosamerica2019.com">SOS America 2019</a></span>
     </p>
   );
 };
