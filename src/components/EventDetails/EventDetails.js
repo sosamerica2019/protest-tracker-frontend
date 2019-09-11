@@ -13,6 +13,7 @@ const renderAddress = (location) => {
     return (
       <div className={styles.info}>
         <div className={styles.infoLabel}>location</div>
+        { location.venue && <span>{location.venue}</span> }
         {
           addressLines.map((line, index) => line && <div key={index}>{line}</div>)
         }
