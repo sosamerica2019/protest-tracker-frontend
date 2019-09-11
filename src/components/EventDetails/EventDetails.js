@@ -22,6 +22,15 @@ const renderAddress = (location) => {
   }
 };
 
+const renderHashtags = (hashtags) => {
+  return (
+    <div className={styles.info}>
+      <div className={styles.infoLabel}>Hashtags</div>
+      <div>{hashtags}</div>
+    </div>
+  );
+};
+
 const renderTimeRange = (startDate, endDate) => {
   return (
     <div className={styles.info}>
@@ -93,7 +102,8 @@ class EventDetails extends Component {
       browser_url: browserUrl,
       description,
       total_accepted: totalAccepted,
-      location
+      location,
+      hashtags
     } = event;
 
     const img400 = eventImage.byType(event.summary, 400);
@@ -181,6 +191,7 @@ class EventDetails extends Component {
               <div className={styles.locationAndDate}>
                 {location && renderAddress(location)}
                 {startDate && renderTimeRange(startDate, endDate)}
+                {hashtags && renderHashtags(hashtags)}
               </div>
             </div>
           </div>
