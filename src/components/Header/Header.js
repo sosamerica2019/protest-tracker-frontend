@@ -62,26 +62,26 @@ class Header extends Component {
       <div className={styles.headerWrapper}>
         <header className={styles.header}>
           <div className={styles.headerLeftSection}>
-            <Link to="/">
-              <img
-                className={styles.protestTrackerBanner}
-                src="static/img/banner.png"
-                srcSet="static/img/banner@2x.png 2x"
-                height="75"
-                width="307"
-                alt="Protest Tracker logo"
-              />
-            </Link>
             <a href="https://www.sosamerica2019.com">
               <img
                 className={styles.sosAmericaLogo}
                 src="static/img/sos_logo.png"
                 srcSet="static/img/sos_logo@2x.png 2x"
                 height="75"
-                width="105"
+                width="94"
                 alt="SOS America logo"
               />
             </a>
+            <Link to="/">
+              <img
+                className={styles.protestTrackerBanner}
+                src="static/img/banner.png"
+                srcSet="static/img/banner@2x.png 2x"
+                height="75"
+                width="168"
+                alt="Protest Tracker logo"
+              />
+            </Link>
           </div>
           <div className={styles.headerRightSection} onClick={e => e.stopPropagation()}>
             <AddEventButton className="add-event-btn" />
