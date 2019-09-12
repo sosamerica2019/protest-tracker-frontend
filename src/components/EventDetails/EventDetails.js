@@ -97,7 +97,6 @@ class EventDetails extends Component {
     }
 
     const {
-      organization,
       title,
       start_date: startDate,
       end_date: endDate,
@@ -105,6 +104,7 @@ class EventDetails extends Component {
       description,
       total_accepted: totalAccepted,
       location,
+      contact,
       hashtags
     } = event;
 
@@ -132,9 +132,10 @@ class EventDetails extends Component {
           </div>
           <h1>{title}</h1>
           { location && location.locality &&
-            <div className={styles.location}>
-              {location.locality}, {location.region}<br />Hosted by {organization}
-            </div>
+            <div className={styles.location}>{location.locality}, {location.region}</div>
+          }
+          {contact && contact.name &&
+            <div className={styles.location}>Hosted by {contact.name}</div>
           }
         </div>
         <div className={styles.content}>
