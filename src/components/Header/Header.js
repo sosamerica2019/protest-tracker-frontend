@@ -2,6 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 
 import { AddEventButton } from '../';
+import { assetVersion } from '../../config';
 import styles from './Header.sass';
 
 class Header extends Component {
@@ -14,8 +15,8 @@ class Header extends Component {
             <a href="https://www.sosamerica2019.com">
               <img
                 className={styles.sosAmericaLogo}
-                src="static/img/sos_logo.png"
-                srcSet="static/img/sos_logo@2x.png 2x"
+                src={`static/img/sos_logo.png?${assetVersion}`}
+                srcSet={`static/img/sos_logo@2x.png?${assetVersion} 2x`}
                 height="75"
                 width="94"
                 alt="SOS America logo"
@@ -24,8 +25,8 @@ class Header extends Component {
             <Link to="/">
               <img
                 className={styles.protestTrackerBanner}
-                src="static/img/banner.png"
-                srcSet="static/img/banner@2x.png 2x"
+                src={`static/img/banner.png?${assetVersion}`}
+                srcSet={`static/img/banner@2x.png?${assetVersion} 2x`}
                 height="75"
                 width="168"
                 alt="Protest Tracker logo"
