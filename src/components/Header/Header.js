@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 import { AddEventButton } from '../';
 import { assetVersion } from '../../config';

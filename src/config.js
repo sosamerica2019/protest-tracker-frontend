@@ -1,5 +1,3 @@
-import { assetVersion as version } from './assetVersion';
-
 export const facebookAppId = process.env.PROTEST_TRACKER_FACEBOOK_APP_ID;
 
 // The code below is a stop-gap while we come up with a more economic
@@ -13,6 +11,7 @@ export const facebookAppId = process.env.PROTEST_TRACKER_FACEBOOK_APP_ID;
 // Currently set to TRUE b/c we are currently switched off of cloudinary in favor of S3 so bandwidth is not an issue right now.  ~Pat
 const overrideDevMode = true;
 
-export const assetVersion = version;
+// Used to break cache on static assets
+export const assetVersion = Date.now();
 
 export const devMode = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') && !overrideDevMode;
