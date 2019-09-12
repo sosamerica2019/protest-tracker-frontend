@@ -108,9 +108,9 @@ class EventDetails extends Component {
       hashtags
     } = event;
 
+    const img200 = eventImage.byType(event.summary, 200);
     const img400 = eventImage.byType(event.summary, 400);
-    const img800 = eventImage.byType(event.summary, 800);
-    const img800Full = urlUtils.fullyQualify(img800);
+    const img800Full = urlUtils.fullyQualify(eventImage.byType(event.summary, 800));
 
     /* eslint-disable jsx-a11y/no-static-element-interactions */
     /* eslint-disable react/no-danger */
@@ -141,10 +141,21 @@ class EventDetails extends Component {
         <div className={styles.content}>
           <div className={styles.left}>
             <img
-              src={img400}
-              srcSet={`${img800} 2x`}
+              src={img200}
+              srcSet={`${img400} 2x`}
               alt={event.summary}
             />
+            <div>
+              <div className={styles.desktopSharing}>
+                <SocialBtns
+                  picture={img800Full}
+                  title={title}
+                  startDate={startDate}
+                  description={description}
+                  iconSize={25}
+                />
+              </div>
+            </div>
           </div>
 
           <div className={styles.right}>
@@ -172,17 +183,6 @@ class EventDetails extends Component {
                     className={styles.popoverWrapper}
                     style={{ visibility: socialPopupOpen ? 'visible' : 'hidden' }}
                   >
-                    <SocialBtns
-                      picture={img800Full}
-                      title={title}
-                      startDate={startDate}
-                      description={description}
-                      iconSize={25}
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className={styles.desktopSharing}>
                     <SocialBtns
                       picture={img800Full}
                       title={title}
