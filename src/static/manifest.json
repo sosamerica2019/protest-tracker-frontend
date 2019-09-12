@@ -1,6 +1,6 @@
 {
- "name": "ResistanceCalendar",
- "short_name": "ResistanceCal",
+ "name": "SOS Protest Tracker",
+ "short_name": "ProtestTracker",
  "icons": [
     {
      "src": "img/android-icon-36x36.png",
