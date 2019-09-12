@@ -4,6 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
+const assetVersion = require('../src/assetVersion');
 
 // TODO Cleanup how we handle email
 const testTrelloEmail = 'paulwilson27+28bftpx2nhjpurvl3laa@boards.trello.com';
@@ -156,7 +157,7 @@ exports.css = function css(srcPath, globalStylesPath) {
     },
     plugins: [
       // Output extracted CSS to a file (not sure if allChunks flag is necessary)
-      new ExtractTextPlugin({ filename: 'main.css', allChunks: true })
+      new ExtractTextPlugin({ filename: `main-v${assetVersion}.css`, allChunks: true })
     ]
   };
 };
