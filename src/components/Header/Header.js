@@ -22,7 +22,7 @@ class Header extends Component {
                 alt="SOS America logo"
               />
             </a>
-            <Link to="/">
+            <a href="/">
               <img
                 className={styles.protestTrackerBanner}
                 src={`static/img/banner.png?${assetVersion}`}
@@ -31,7 +31,7 @@ class Header extends Component {
                 width="168"
                 alt="Protest Tracker logo"
               />
-            </Link>
+            </a>
           </div>
           <div className={styles.headerRightSection} onClick={e => e.stopPropagation()}>
             <AddEventButton className="add-event-btn" />
